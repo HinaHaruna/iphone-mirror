@@ -27,13 +27,13 @@ It drives [UxPlay](https://github.com/FDH2/UxPlay) (the open-source AirPlay serv
 | Windows 10/11 64-bit, a GPU with D3D11 video decode (any NVIDIA/AMD/Intel from the last ~8 years) | hardware HEVC/H.264 decoding |
 | [Python 3.10+](https://www.python.org/downloads/) (tick *Add Python to PATH*) | runs the GUI |
 | [Apple Bonjour](https://support.apple.com/kb/dl999) (comes with iTunes) | lets the iPhone discover the PC |
-| `bin\uxplay.exe` + its DLLs | build it once with [`build_uxplay.ps1`](BUILD_WINDOWS.md), or unzip a release into `bin\` |
+| `bin\uxplay.exe` + its DLLs | included in the [release zip](https://github.com/HinaHaruna/iphone-mirror/releases/latest), or build it with [`build_uxplay.ps1`](BUILD_WINDOWS.md) |
 
 ## Quick start
 
-1. Get UxPlay into `bin\`:
-   - **Release zip** (if one is published on the Releases page): extract it so you have `bin\uxplay.exe`.
-   - **Build it yourself**: install [MSYS2](https://www.msys2.org/) and the Bonjour SDK, then run
+1. Download **`iPhone-Mirror-…-win64.zip`** from the [latest release](https://github.com/HinaHaruna/iphone-mirror/releases/latest)
+   and extract it anywhere. It already includes `bin\uxplay.exe` and every DLL/plugin it needs, so no build is required.
+   - Or build UxPlay yourself: install [MSYS2](https://www.msys2.org/) and the Bonjour SDK, then run
      `powershell -ExecutionPolicy Bypass -File .\build_uxplay.ps1`. See [BUILD_WINDOWS.md](BUILD_WINDOWS.md).
 2. Double-click **`run.bat`**. It creates a virtualenv, installs `requirements.txt`, and opens the GUI.
 3. Press **▶ Start** (`เริ่มรับสัญญาณ AirPlay`), pick resolution + FPS, then on the iPhone open Control Center → **Screen Mirroring** → choose

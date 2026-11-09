@@ -22,9 +22,9 @@
 
 1. **Python 3.10+** จาก https://www.python.org/downloads/ ตอนติดตั้งให้ติ๊ก ✅ *Add Python to PATH*
 2. **Apple Bonjour** (จำเป็น) iPhone ใช้ Bonjour หาเครื่องรับ ถ้ามี iTunes อยู่แล้วก็มี Bonjour แล้ว ถ้ายังไม่มีให้ติดตั้งจาก https://support.apple.com/kb/dl999
-3. **UxPlay** ต้องมีไฟล์ `bin\uxplay.exe` พร้อม DLL ทำได้ 2 ทาง
-   - ถ้ามีไฟล์ zip ในหน้า Releases ให้แตกไฟล์ลงโฟลเดอร์ `bin\`
-   - หรือ build เองด้วย MSYS2 ตามขั้นตอนใน [BUILD_WINDOWS.md](BUILD_WINDOWS.md) ครั้งแรกใช้เวลา 10–30 นาที
+3. **ดาวน์โหลดโปรแกรม** ไฟล์ **`iPhone-Mirror-…-win64.zip`** จาก [Release ล่าสุด](https://github.com/HinaHaruna/iphone-mirror/releases/latest)
+   แล้วแตกไฟล์ไว้ที่ไหนก็ได้ ใน zip มี `bin\uxplay.exe` พร้อม DLL ครบแล้ว ไม่ต้อง build เอง
+   - หรือถ้าอยาก build เองด้วย MSYS2 ดูขั้นตอนใน [BUILD_WINDOWS.md](BUILD_WINDOWS.md) (ครั้งแรกใช้เวลา 10–30 นาที)
 4. ดับเบิลคลิก **`run.bat`** ระบบจะสร้าง venv ติดตั้ง dependency แล้วเปิด GUI ให้เอง
 
 ## วิธีใช้งาน
