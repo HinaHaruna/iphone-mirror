@@ -1,0 +1,26 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  check:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: python -m pip install -r requirements.txt
+
+      - name: Byte-compile
+        run: python -m compileall -q .
+
+      - name: Import modules + check UxPlay arguments
+        run: |
+          python -c "import capture, display_utils, network_utils, setup_uxplay, uxplay_manager, start_dialog"
+          python -c "from pathlib import Path; import queue; from uxplay_manager import *; m = UxPlayManager(Path('uxplay.exe'), queue.Queue()); a = m.build_args(UxPlayConfig()); assert '3840x2160@120' in a and '-h265' in a, a; print(a)"

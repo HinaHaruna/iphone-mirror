@@ -1,0 +1,35 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+build/
+dist/
+*.spec
+
+# --- Local, per-user state ---
+config.json
+.claude/
+idea.txt
+
+# --- Built / third-party binaries (≈230 MB; built by build_uxplay.ps1) ---
+# Ship these as a GitHub Release zip instead of committing them.
+bin/
+
+# UxPlay source checkout (its own git repo: https://github.com/FDH2/UxPlay)
+build_uxplay/
+
+# Apple Bonjour SDK — download it yourself, see BUILD_WINDOWS.md
+bonjour_sdk/
+
+# --- Captures / recordings ---
+*.png
+*.mp4
+!docs/**/*.png
+
+# --- OS / editor ---
+Thumbs.db
+Desktop.ini
+.DS_Store
+.vscode/
+.idea/
